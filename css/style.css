@@ -4,14 +4,14 @@
     padding: 0;
 }
 
-/* difference btw vw, px, %, em, rem:
-
-vw: viewport width
-px: pixels
-%: percentage
-em: font size of the element
-rem: font size of the root element
+/*
+vw = viewport width
+px = pixels
+% = percentage
+em = font size of the element
+rem = font size of the root element
 */
+
 body {
     min-height: 100vh;
 
@@ -21,20 +21,17 @@ body {
 
     font-family: Arial, sans-serif;
 }
-/*
-assiging body to display flex and centering the content horizontally and vertically using justify-content
-
-*/
 
 .game-container {
     width: min(95vw, 500px);
 }
 
 /*
- game-board is a grid with 20 columns and 20 rows, each cell is 1 fraction of the available space.
- The aspect-ratio property is set to 1, which means the width and height of the game-board will be equal,
- creating a square shape.
+Game board has 20 columns and 20 rows.
+Each cell takes 1 fraction of available space.
+aspect-ratio: 1 makes the board square.
 */
+
 #game-board {
     width: 100%;
     aspect-ratio: 1;
@@ -58,6 +55,12 @@ assiging body to display flex and centering the content horizontally and vertica
 .head {
     background: darkgreen;
 }
+
+.food {
+    background: red;
+    border-radius: 50%;
+}
+
 button {
     padding: 10px 15px;
 

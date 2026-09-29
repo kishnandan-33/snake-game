@@ -1,42 +1,38 @@
-class Snake {
+export class Snake {
 
     constructor() {
+
         this.body = [
             { x: 10, y: 10 },
             { x: 9, y: 10 },
-            { x: 8, y: 10 },
+            { x: 8, y: 10 }
         ];
+
     }
 
-    //get head
+    // Get the head of the snake
     getHead() {
         return this.body[0];
     }
 
-    // Move the snake by adding a new head segment at the front of the body
+    // Move snake by adding new head
     move(newHead) {
         return this.body.unshift(newHead);
     }
 
-    // Remove the tail segment of the snake's body
+    // Remove tail
     removeTail() {
         return this.body.pop();
     }
 
-    // grow the snake by adding a new head segment at the front 
-    // of the body without removing the tail segment
+    // Grow snake without removing tail
     grow(newHead) {
         this.body.unshift(newHead);
     }
 
-    //get body
+    // Get complete snake body
     getBody() {
         return this.body;
     }
 
-}
-
-// Make accessible globally and for modules
-if (typeof window !== 'undefined') {
-    window.Snake = Snake;
 }
