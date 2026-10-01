@@ -2,7 +2,7 @@ import { Game } from './game.js';
 import { setupInput } from './input.js';
 
 const board = document.getElementById('game-board');
-
+const scoreElement = document.getElementById("score");
 let game;
 let interval;
 
@@ -70,13 +70,19 @@ const Render = () => {
             `[data-x="${game.food.x}"][data-y="${game.food.y}"]`
         );
 
-    if (foodCell) {
+        if (foodCell) {
 
         foodCell.classList.add(
             "food"
         );
 
     }
+
+
+    // Score
+    scoreElement.textContent =
+        game.score;
+
 
 }
 

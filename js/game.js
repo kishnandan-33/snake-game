@@ -96,7 +96,9 @@ export class Game {
         this.snake.move(newHead);
 
         // Food
+
         if (foodCollision(newHead, this.food)) {
+            this.score++;
             this.food = createFood(
                 this.snake.getBody(),
                 this.rows,
